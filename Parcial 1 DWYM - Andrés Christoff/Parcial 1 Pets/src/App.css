@@ -1,0 +1,142 @@
+.priority-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    margin-right: 5px;
+}
+
+.priority-icon.low {
+    background-color: rgb(32, 189, 53);
+}
+
+.priority-icon.medium {
+    background-color: rgb(230, 126, 34);
+}
+
+.priority-icon.high {
+    background-color: rgb(192, 57, 43);
+}
+
+.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+.dark-theme .task-column {
+    border-color: white;
+    border: 1px solid;
+    color: white;
+}
+
+.dark-theme .task {
+    border-color: white;
+    border: 1px solid;
+    color: white;
+}
+
+.light-theme .task-column {
+    border-color: black;
+    border: 1px solid;
+    color: black;
+}
+
+.light-theme .task {
+    border-color: black;
+    border: 1px solid;
+    color: black;
+}
+
+.light-theme {
+    background-color: white;
+    color: black;
+}
+
+.task-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 1440px) {
+    .task-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-area: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .task-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: fit-content;
+    }
+}
+
+@media (max-width: 425px) {
+    .task-container {
+        grid-template-columns: 1fr;
+        width: fit-content;
+    }
+}
+
+.task-manager .task-column h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.task-manager-title {
+    text-align: center;
+}
+
+.task-manager-buttons {
+    display: flex;
+    justify-content: right;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none !important;
+    background-color: rgb(32, 189, 189) !important;
+    color: white;
+}
+
+.task-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-column,
+.task {
+    border-radius: 10px;
+}
+
+.task {
+    min-width: 250px;
+    text-align: center;
+    margin: 10px;
+}
+
+.task-manager .task p {
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.task-manager .task .priority-icon {
+    margin-right: 10px;
+}
+
+.droppable-container {
+    display: flex;
+    flex-direction: column;
+    /* To stack the items vertically */
+    justify-content: center;
+    /* To center items vertically */
+    align-items: center;
+    /* To center items horizontally */
+    min-height: 300px;
+}
